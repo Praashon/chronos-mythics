@@ -45,5 +45,3 @@ next-env.d.ts
 # misinterprets as CSS classes
 .agent/
 .uiuxagent
-/.uiuxagent
-/.agent
