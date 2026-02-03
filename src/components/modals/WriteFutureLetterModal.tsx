@@ -30,8 +30,6 @@ export default function WriteFutureLetterModal({ isOpen, onClose }: WriteFutureL
   const [isLoading, setIsLoading] = useState(false)
   const [previewResponse, setPreviewResponse] = useState('')
   const [isGeneratingPreview, setIsGeneratingPreview] = useState(false)
-  
-  // Reset form when modal opens
   useEffect(() => {
     if (isOpen) {
       setContent('')
