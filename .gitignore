@@ -44,4 +44,6 @@ next-env.d.ts
 # These contain Python/JS files with regex patterns that Tailwind
 # misinterprets as CSS classes
 .agent/
-.uiuxagent/
+.uiuxagent
+/.uiuxagent
+/.agent
