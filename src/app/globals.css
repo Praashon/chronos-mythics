@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* 
+  CRITICAL: Restrict Tailwind content scanning to src directory only.
+  Tailwind v4 auto-detects content and was scanning .agent/ directory
+  which contains Python regex patterns like r'[-:|]' that get 
+  misinterpreted as arbitrary CSS classes.
+*/
+@source "../../src/**/*.{ts,tsx}";
+
 /* ========================================
    CHRONOS MYTHICA - DESIGN SYSTEM
    A cosmic, mythic aesthetic with deep blacks,

@@ -1,6 +1,6 @@
 'use client'
 
-import { InputHTMLAttributes, forwardRef } from 'react'
+import React, { InputHTMLAttributes, forwardRef } from 'react'
 import { cn } from '@/lib/utils'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -44,7 +44,7 @@ export default Input
 // Textarea variant
 export const Textarea = forwardRef<
   HTMLTextAreaElement,
-  InputHTMLAttributes<HTMLTextAreaElement> & { label?: string; error?: string }
+  React.TextareaHTMLAttributes<HTMLTextAreaElement> & { label?: string; error?: string }
 >(({ className, label, error, ...props }, ref) => {
   return (
     <div className="w-full">

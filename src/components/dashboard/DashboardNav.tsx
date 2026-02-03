@@ -64,7 +64,7 @@ export default function DashboardNav() {
               <button
                 key={view.id}
                 onClick={() => setActiveView(view.id)}
-                className={`relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
                   activeView === view.id
                     ? 'text-white'
                     : 'text-gray-400 hover:text-gray-200'
@@ -118,7 +118,7 @@ export default function DashboardNav() {
             {/* Profile */}
             <button
               onClick={handleSignOut}
-              className="flex items-center gap-2 p-2 rounded-full text-gray-400 hover:text-white hover:bg-white/5 transition-all"
+              className="flex items-center gap-2 p-2 rounded-full text-gray-400 hover:text-white hover:bg-white/5 transition-all cursor-pointer"
               title="Sign out"
             >
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#8b5cf6] to-[#3b82f6] flex items-center justify-center text-white text-sm font-medium">
@@ -134,7 +134,7 @@ export default function DashboardNav() {
             <button
               key={view.id}
               onClick={() => setActiveView(view.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 ${
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 cursor-pointer ${
                 activeView === view.id
                   ? 'bg-white/10 text-white'
                   : 'text-gray-400'

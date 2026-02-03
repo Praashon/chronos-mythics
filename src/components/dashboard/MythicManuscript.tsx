@@ -155,7 +155,7 @@ export default function MythicManuscript() {
               <button
                 onClick={() => handleFlip('prev')}
                 disabled={currentPage === 0 || isFlipping}
-                className="p-3 rounded-full glass hover:bg-white/5 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                className="p-3 rounded-full glass hover:bg-white/5 disabled:opacity-30 disabled:cursor-not-allowed transition-all cursor-pointer"
               >
                 <ChevronLeft className="w-6 h-6 text-gray-400" />
               </button>
@@ -166,7 +166,7 @@ export default function MythicManuscript() {
                   <button
                     key={index}
                     onClick={() => !isFlipping && setCurrentPage(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
                       index === currentPage 
                         ? 'w-6 bg-[#fbbf24]' 
                         : 'bg-white/20 hover:bg-white/40'
@@ -178,7 +178,7 @@ export default function MythicManuscript() {
               <button
                 onClick={() => handleFlip('next')}
                 disabled={currentPage === pages.length - 1 || isFlipping}
-                className="p-3 rounded-full glass hover:bg-white/5 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                className="p-3 rounded-full glass hover:bg-white/5 disabled:opacity-30 disabled:cursor-not-allowed transition-all cursor-pointer"
               >
                 <ChevronRight className="w-6 h-6 text-gray-400" />
               </button>

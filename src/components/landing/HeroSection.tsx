@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
 import Button from '@/components/ui/Button'
 import AuthModal from '@/components/modals/AuthModal'
-import { Menu, X, Sparkles } from 'lucide-react'
+import { Menu, X, Sparkles, ArrowRight } from 'lucide-react'
 
 export default function HeroSection() {
   const [isAuthOpen, setIsAuthOpen] = useState(false)
@@ -75,7 +75,7 @@ export default function HeroSection() {
             
             {/* Mobile menu button */}
             <button
-              className="md:hidden p-2 text-gray-400 hover:text-white"
+              className="md:hidden p-2 text-gray-400 hover:text-white cursor-pointer transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -145,7 +145,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-2xl md:text-3xl text-gray-400 mb-4 font-light"
+            className="text-2xl md:text-3xl text-gray-300 mb-4 font-light"
           >
             Your life as eternal myth.
           </motion.p>
@@ -155,7 +155,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg text-gray-500 max-w-2xl mx-auto mb-12"
+            className="text-lg text-gray-400 max-w-2xl mx-auto mb-12"
           >
             A private sanctuary where your memories become legends, your emotions form constellations, 
             and letters to your future self echo across time.
@@ -179,8 +179,9 @@ export default function HeroSection() {
                 <motion.span
                   animate={{ x: [0, 4, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                  className="inline-flex"
                 >
-                  →
+                  <ArrowRight className="w-5 h-5" />
                 </motion.span>
               </span>
             </Button>

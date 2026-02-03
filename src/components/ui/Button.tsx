@@ -1,10 +1,10 @@
 'use client'
 
 import { ButtonHTMLAttributes, forwardRef } from 'react'
-import { motion } from 'framer-motion'
+import { motion, HTMLMotionProps } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<HTMLMotionProps<'button'>, 'ref'> {
   variant?: 'cosmic' | 'ghost' | 'outline' | 'danger'
   size?: 'sm' | 'md' | 'lg'
   isLoading?: boolean
@@ -12,7 +12,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'cosmic', size = 'md', isLoading, children, disabled, ...props }, ref) => {
-    const baseStyles = 'relative inline-flex items-center justify-center font-semibold tracking-wide transition-all duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden'
+    const baseStyles = 'relative inline-flex items-center justify-center font-semibold tracking-wide transition-all duration-300 ease-out cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden'
     
     const variants = {
       cosmic: 'bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] text-[#050508] hover:shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:-translate-y-0.5',

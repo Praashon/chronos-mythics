@@ -125,7 +125,7 @@ export default function WriteFutureLetterModal({ isOpen, onClose }: WriteFutureL
                 key={qd.label}
                 type="button"
                 onClick={() => handleQuickDate(qd.getValue)}
-                className={`px-3 py-1.5 rounded-full text-sm transition-all ${
+                className={`px-3 py-1.5 rounded-full text-sm transition-all cursor-pointer ${
                   unlockDate === format(qd.getValue(), 'yyyy-MM-dd')
                     ? 'bg-[#3b82f6] text-white'
                     : 'bg-white/5 text-gray-400 hover:bg-white/10'

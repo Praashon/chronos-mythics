@@ -114,9 +114,7 @@ function ConstellationLines({ stars }: { stars: ConstellationStar[] }) {
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
-          array={positions}
-          count={positions.length / 3}
-          itemSize={3}
+          args={[positions, 3]}
         />
       </bufferGeometry>
       <lineBasicMaterial
@@ -191,7 +189,7 @@ function MemoryPanel({
     >
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 p-1 rounded-full hover:bg-white/5 transition-colors"
+        className="absolute top-4 right-4 p-1 rounded-full hover:bg-white/5 transition-colors cursor-pointer"
       >
         <X className="w-5 h-5 text-gray-400" />
       </button>

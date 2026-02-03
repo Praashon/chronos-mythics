@@ -298,7 +298,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
             <button
               type="button"
               onClick={() => switchMode('magic')}
-              className="w-full text-center text-sm text-[#8b5cf6] hover:text-[#a78bfa] transition-colors"
+              className="w-full text-center text-sm text-[#8b5cf6] hover:text-[#a78bfa] transition-colors cursor-pointer"
             >
               Sign in with Magic Link
             </button>
@@ -311,7 +311,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
                 <button
                   type="button"
                   onClick={() => switchMode('signup')}
-                  className="text-[#fbbf24] hover:text-[#fcd34d] transition-colors font-medium"
+                  className="text-[#fbbf24] hover:text-[#fcd34d] transition-colors font-medium cursor-pointer"
                 >
                   Create an account
                 </button>
@@ -322,7 +322,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
                 <button
                   type="button"
                   onClick={() => switchMode('login')}
-                  className="text-[#fbbf24] hover:text-[#fcd34d] transition-colors font-medium"
+                  className="text-[#fbbf24] hover:text-[#fcd34d] transition-colors font-medium cursor-pointer"
                 >
                   Sign in
                 </button>

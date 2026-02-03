@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Agent directories - exclude from Tailwind content detection
+# These contain Python/JS files with regex patterns that Tailwind
+# misinterprets as CSS classes
+.agent/
+.uiuxagent/

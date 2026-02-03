@@ -7,6 +7,9 @@ export type Json =
   | Json[]
 
 export interface Database {
+  __InternalSupabase: {
+    PostgrestVersion: "14.1"
+  }
   public: {
     Tables: {
       profiles: {
@@ -37,6 +40,7 @@ export interface Database {
           created_at?: string
           updated_at?: string
         }
+        Relationships: []
       }
       emotions: {
         Row: {
@@ -66,6 +70,7 @@ export interface Database {
           user_id?: string | null
           created_at?: string
         }
+        Relationships: []
       }
       memories: {
         Row: {
@@ -98,6 +103,7 @@ export interface Database {
           created_at?: string
           updated_at?: string
         }
+        Relationships: []
       }
       memory_emotions: {
         Row: {
@@ -118,6 +124,7 @@ export interface Database {
           emotion_id?: string
           created_at?: string
         }
+        Relationships: []
       }
       constellation_stars: {
         Row: {
@@ -153,6 +160,7 @@ export interface Database {
           brightness?: number
           created_at?: string
         }
+        Relationships: []
       }
       constellation_connections: {
         Row: {
@@ -176,6 +184,7 @@ export interface Database {
           star_id_2?: string
           created_at?: string
         }
+        Relationships: []
       }
       future_letters: {
         Row: {
@@ -208,6 +217,7 @@ export interface Database {
           is_unlocked?: boolean
           created_at?: string
         }
+        Relationships: []
       }
       manuscript_chapters: {
         Row: {
@@ -237,6 +247,7 @@ export interface Database {
           created_at?: string
           updated_at?: string
         }
+        Relationships: []
       }
     }
     Views: {
